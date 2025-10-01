@@ -28,8 +28,8 @@ pipeline {
             steps {
                 echo "Running Node.js app on port $NODE_PORT"
                 bat '''
-                \$Env:PORT=$NODE_PORT
-                "C:\\Program Files\\nodejs\\npm" start
+                set PORT=%NODE_PORT%
+                "C:\\Program Files\\nodejs\\npm" --scripts-prepend-node-path=true start
                 '''
             }
         }

@@ -29,7 +29,7 @@ pipeline {
                 echo "Running Node.js app on port $NODE_PORT"
                 bat """
                 \$Env:PORT=$NODE_PORT
-                npm start
+                "C:\\Program Files\\nodejs\\npm" start
                 """
             }
         }

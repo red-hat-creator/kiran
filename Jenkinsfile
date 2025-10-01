@@ -1,7 +1,9 @@
 pipeline {
     agent any
 
-    environment {
+    environment { 
+        NODE_HOME = 'C:\\Program Files\\nodejs'
+        PATH = "${NODE_HOME};${env.PATH}"
         NODE_PORT = "${new Random().nextInt(6000) + 3000}"
     }
 

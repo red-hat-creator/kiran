@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'C:\Program Files\nodejs\npm install'
+                bat 'C:\\Program Files\\nodejs\\npm install'
             }
         }
 

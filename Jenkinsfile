@@ -27,10 +27,10 @@ pipeline {
         stage('Run') {
             steps {
                 echo "Running Node.js app on port $NODE_PORT"
-                bat """
+                bat '''
                 \$Env:PORT=$NODE_PORT
                 "C:\\Program Files\\nodejs\\npm" start
-                """
+                '''
             }
         }
     }

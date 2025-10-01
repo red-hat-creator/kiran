@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                powershell 'npm install'
+                bat 'npm install'
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo "Running Node.js app on port $NODE_PORT"
-                powershell """
+                bat """
                 \$Env:PORT=$NODE_PORT
                 npm start
                 """
